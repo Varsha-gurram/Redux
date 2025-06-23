@@ -1,0 +1,39 @@
+/* App.css */
+.App {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 60%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li div:first-child {
+  font-weight: bold;
+}
+
