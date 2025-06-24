@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 import { useDispatch, useSelector } from "react-redux";
 import { addBook, removeBook, increment, decrement,deleteBook } from "./Redux/Action";
-
+import AppMulti from "./AppMulti";
 function App() {
   const dispatch = useDispatch();
   const [numInput, setNumInput] = useState(1);
@@ -20,12 +20,12 @@ function App() {
           type="number"
           value={numInput}
           onChange={(e) => setNumInput(Number(e.target.value))}
-        ></input>
-        <center></center>
+        ></input><br/>
 
-        <button onClick={() => dispatch(increment(numInput))}>Increment</button>
-        <br />
-        <button onClick={() => dispatch(decrement(numInput))}>Decrement</button>
+        <button onClick={() => dispatch(increment(numInput))} style={{marginLeft:5}}>Increment</button>
+        
+        <button onClick={() => dispatch(decrement(numInput))} style={{marginLeft:5}}>Decrement</button>
+        <AppMulti numInput={numInput}/>
       </center>
       <input
         type="text"
@@ -40,9 +40,11 @@ function App() {
             setBookInput("");
           }
         }}
+        style={{marginLeft:5}}
       >
         Add Book
       </button>
+      <button onClick={()=>dispatch(deleteBook(bookInput.trim()))} style={{marginLeft:5}}>Delete Book</button>
       <ul>
         {bookList.map(([title, count]) => (
             <li key={title}>
@@ -51,12 +53,15 @@ function App() {
               <div style={{display:"flex",gap:2}}>
                 <button onClick={() => dispatch(addBook(title.trim()))}>+</button>
               <button onClick={() => dispatch(removeBook(title))}>-</button>
-              <button onClick={()=>dispatch(deleteBook(bookInput.trim()))}>Delete Book</button>
+              
               </div>
             </li>
         ))}
       </ul>
+      {/* <h3><center>Multiply</center></h3> */}
+      
     </div>
+    
   );
 }
 
