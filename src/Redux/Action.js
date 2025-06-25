@@ -18,4 +18,11 @@ export const deleteBook=(name)=>({
     type:"DELETE_BOOK",
     payload:name,
 
-})
+});
+export const incrementM=(value)=>{
+    return(dispatch)=>{
+        setTimeout(()=>{
+            dispatch({type:"INCREMENT",payload:value});
+        },2000);
+    };
+};

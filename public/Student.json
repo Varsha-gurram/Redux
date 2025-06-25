@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "name": "Varshini Gurram",
+    "age": 20,
+    "email": "Varshini@example.com",
+    "phone": "9876543210",
+    "course": "Computer Science",
+    "year": "2nd",
+    "gpa": 4.8,
+    "address": {
+      "city": "Bapatla",
+      "state": "AP"
+    },
+    "attendance": {
+      "totalDays": 180,
+      "presentDays": 165
+    },
+    "grades": {
+      "DSA": "O",
+      "DBMS": "O",
+      "OS": "O"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Sravani",
+    "age": 21,
+    "email": "Sravani@example.com",
+    "phone": "9876543211",
+    "course": "Mechanical Engineering",
+    "year": "3rd",
+    "gpa": 4.5,
+    "address": {
+      "city": "Bapatla",
+      "state": "AP"
+    },
+    "attendance": {
+      "totalDays": 180,
+      "presentDays": 155
+    },
+    "grades": {
+      "Thermodynamics": "O",
+      "Digital Electronics": "A+",
+      "Fluid Mechanics": "O"
+    }
+  }
+]
